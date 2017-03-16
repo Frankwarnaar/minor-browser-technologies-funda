@@ -64,9 +64,11 @@ Currently when the user sorts the results, it's being reordered with the 'order'
 2. Let the sort options link to the same page, with it's name of the sort option as a query string in the href. Keep the search query in the href.
 
 -- without javascript --
+
 3. Get the sort option from the query string server side. Get the results of the search query in the requested order from the funda API.
 
 -- with javascript --
+
 3. Prevent the default behaviour of the sort links. Get the name of selected sort option
 4. Get all the houses from the DOM, with their parameters from their data attributes.
 5. Sort the houses on the selected sort option
