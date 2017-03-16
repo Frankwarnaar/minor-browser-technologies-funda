@@ -12,13 +12,16 @@ If the user clicks on one results, he/she navigates to the detail page.
 
 ## Improvements
 
-### 1. Client side javascript
+### 1. Get results
+#### Current process
 Currently the next process takes place when the user enters the web app:
 1. The app gets the coordinates of the user with the geo API.
 2. These coördinates are passed to the Goole Maps API. This returns the matching address.
 3. The street and city are passed to the Funda API. This returns houses in a radius of 1 kilometer of the given street and city.
 If one of those steps don't succeed, the user gets a notifation that there couldn't be found any results.
 
+
+#### Wished process
 The wished process would be like this, to make the app work without javascript.
 1. Show a search field, so the user can search for results. (On search, redirect to a page with the search query in the url. Skip to step 7)
 2. Check if it's possible to get the users location with the geo API.
@@ -44,3 +47,12 @@ The wished process would be like this, to make the app work without javascript.
 13. Handle a request to the Funda API to get the details of the house.
 14. Generate an html page with the details.
 15. Serve the user with the page
+
+### 2. Thumbnails
+![Thumbnails](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/detailscreen.png)
+![Image preview](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/image.png)
+When the user clicks a thumbnail in the detail page, the picture is being previewed big with javascript. How this should be done is:
+1. Wrap the thumbnail in an anchor link. Link to a full screen image page.
+2. With javascript, prevent the default behaviour of these anchor links.
+3. Get the src of the big image.
+4. Show a modal with the big image in it.
