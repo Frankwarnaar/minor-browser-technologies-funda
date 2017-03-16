@@ -12,7 +12,8 @@ If the user clicks on one results, he/she navigates to the detail page.
 
 ## Test lab
 ![Detail](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/screenshot_test-lab.png)
-On one of the devices browser would not get the location of the user. However, it would just keep on loading. 
+
+On one of the devices browser would not get the location of the user, because HTTPS was required. However, it would just keep on loading. So the app was totally useless.
 
 ## Improvements
 
