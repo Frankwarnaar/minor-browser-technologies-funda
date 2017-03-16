@@ -10,6 +10,10 @@ When the results come, the houses are rendered into an overview.
 ![Detail](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/detailscreen.png)
 If the user clicks on one results, he/she navigates to the detail page.
 
+## Test lab
+![Detail](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/screenshot_test-lab.png)
+On one of the devices browser would not get the location of the user. However, it would just keep on loading. 
+
 ## Improvements
 
 ### 1. Get results
