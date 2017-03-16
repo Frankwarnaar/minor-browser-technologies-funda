@@ -74,3 +74,21 @@ Currently when the user sorts the results, it's being reordered with the 'order'
 5. Sort the houses on the selected sort option
 6. Remove the results from the DOM.
 7. Render the sorted results again in the DOM.
+
+### 4. Filters
+![Filters](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/homescreen.png)
+Right now the filters are working with javascript. They should work like this:
+1. Set the filterable parameters as data attributes to the DOM element of each result.
+2. Let the filter options link to the same page, with it's name of the filter option as a query string in the href. Keep the search query in the href.
+
+-- without javascript --
+
+3. Get the filter option from the query string server side. Get the filtered results of the search query from the funda API.
+
+-- with javascript --
+
+3. Prevent the default behaviour of the filter links. Get the name of selected filter option
+4. Get all the houses from the DOM, with their parameters from their data attributes.
+5. Filter the array of houses on the selected filter option.
+6. Remove the results from the DOM.
+7. Render the filtered results again in the DOM.
