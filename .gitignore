@@ -1,5 +1,4 @@
 node_modules/
 **/**/cfg.js
 **/**/fonts/
-dist/img
-dist/js
+dist/
