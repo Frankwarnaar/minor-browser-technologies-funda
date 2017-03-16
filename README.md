@@ -56,3 +56,19 @@ When the user clicks a thumbnail in the detail page, the picture is being previe
 2. With javascript, prevent the default behaviour of these anchor links.
 3. Get the src of the big image.
 4. Show a modal with the big image in it.
+
+### 3. Screen reader / tabbing - sorting results
+![Results](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/homescreen.png)
+Currently when the user sorts the results, it's being reordered with the 'order' css property in Javascript. When the user tabs through results, while they are sorted, they are just visually sorted, not in the DOM. Besides that, this sorting doesn't work without javascript The way this should be done is with the next steps:
+1. Set the sortable parameters as data attributes to the DOM element of each result.
+2. Let the sort options link to the same page, with it's name of the sort option as a query string in the href. Keep the search query in the href.
+
+-- without javascript --
+3. Get the sort option from the query string server side. Get the results of the search query in the requested order from the funda API.
+
+-- with javascript --
+3. Prevent the default behaviour of the sort links. Get the name of selected sort option
+4. Get all the houses from the DOM, with their parameters from their data attributes.
+5. Sort the houses on the selected sort option
+6. Remove the results from the DOM.
+7. Render the sorted results again in the DOM.
