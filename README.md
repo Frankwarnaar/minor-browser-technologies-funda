@@ -97,3 +97,20 @@ Right now the filters are working with javascript. They should work like this:
 5. Filter the array of houses on the selected filter option.
 6. Remove the results from the DOM.
 7. Render the filtered results again in the DOM.
+
+### 5. Colorblind
+![Overview](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/home_colorblind.png)
+![Detail](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/detail_colorblind.png)
+When you're colorblind, the app still works. Contrasts are good.
+
+### 6. Custom fonts.
+![No fonts](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/custom_fonts.png)
+The proxima nova font is used in this app. Without it, it falls back to the sans-serif.
+
+### 7. Localstorage & cookies
+Local storage and cookies are not used in this application. If it would be used, there should always be done a check if localstorage or cookies are available. This way the app doesn't break if they are not available.
+
+### 8. Bad network
+![Bad network](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/slow_network.png)
+![Bad network overview](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/slow_network.png)
+The app does work on slow network. I tested on GPRS (50kb/s). The app was still succeeding api calls. However it took really long. It took 40 seconds before the api call to funda succeeded. After this, content was loaded.
