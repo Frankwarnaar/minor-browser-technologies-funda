@@ -1,3 +1,6 @@
+# Break the web
+[keynote](https://github.com/Frankwarnaar/minor-browser-technologies-funda/blob/master/breek_het_web.key?raw=true)
+
 # Funda - progressive enhancement wishlists
 
 ## What does my app do?
@@ -13,7 +16,7 @@ If the user clicks on one results, he/she navigates to the detail page.
 ## Test lab
 ![Detail](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/screenshot_test-lab.png)
 
-On one of the devices in the test lab the browser would not get the location of the user, because HTTPS was required. However, it would just keep on loading. So the app was totally useless.
+On the Google Nexus in the test lab, the browser would not get the location of the user, because HTTPS was required. However, it would just keep on loading. So the app was totally useless.
 
 ## Improvements
 
@@ -114,3 +117,9 @@ Local storage and cookies are not used in this application. If it would be used,
 ![Bad network](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/slow_network.png)
 ![Bad network overview](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/slow_network.png)
 The app does work on slow network. I tested on GPRS (50kb/s). The app was still succeeding api calls. However it took really long. It took 40 seconds before the api call to funda succeeded. After this, content was loaded.
+
+### 9. No images
+![Overview](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/no_images_1.png)
+![Detail](https://raw.githubusercontent.com/Frankwarnaar/minor-browser-technologies-funda/master/audits/no_images_2.png)
+
+Without images, the app is still giving the user information about the available houses. However, there are no alt's given to dynamicly loaded images. This could be improved at the overview pages, because there is just rendered one picture. Here, the address of the house could be given as alt. On the overview page, it's not possible to get information about the picture from the Funda API. So it's pretty hard to get an describing alt text for each picture.
